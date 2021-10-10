@@ -1,0 +1,253 @@
+
+<!--https://fontawesome.com/v4.7/cheatsheet/-->
+<html>
+<title>COVID 19 OUTBREAK PREDICTION</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Muli", Dorid serif}
+table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 100%;
+        border: 1px solid #ddd;
+    }
+
+    th,
+    td {
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2
+    }
+    #home_count_table {
+  font-family: "Muli",Dorid serif ;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#home_count_table td, #home_count_table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#home_count_table tr:nth-child(even){background-color: #cddadada;}
+
+#home_count_table tr:hover {background-color: rgb(205, 210, 212);}
+
+#home_count_table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #00a0eb;
+  color: white;
+}
+.outer {
+  width: 200px;
+  margin: 0 auto;
+  background-color: yellow;
+}
+
+.inner {
+  margin-left: 50px;
+  background-color: orange;
+}
+</style>
+<body class="w3-light-grey">
+
+<!-- Top container -->
+<div class="w3-bar w3-top w3-black w3-large" style="z-index:8; height:10%;align-items: center;padding-top: 10px; ">
+  <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i> </button>
+  <span class="w3-bar-item w3-center">
+    COVID 19 OUTBREAK PREDICTION</span>
+
+</div>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container w3-row">
+    <div class="w3-col s4" style="padding-top: 40px;">
+      <img src="https://www.chg.org.uk/wp-content/uploads/2020/03/Website-covid-icons-01.png" width="280" height="35%">
+    </div>
+    <div class="w3-col s8 w3-bar">
+
+    </div>
+  </div>
+  <hr>
+  <div class="w3-container">
+    <h5><b>Menus</b></h5>
+
+  </div>
+  <div class="w3-bar-block" style="font-size: large; font-family: rockwell ;">
+    <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+    <a href="{% url 'home' %}" class="w3-bar-item w3-button w3-padding "><i class="fa fa-pencil-square-o fa-fw"></i>  Overview</a>
+    <a href="{% url 'charts' %}"  class="w3-bar-item w3-button w3-padding" ><i class="fa fa-area-chart fa-fw"></i> Statistics </a>
+    <a href="{% url 'prediction' %}" class="w3-bar-item w3-button w3-padding"><i class="fa fa-pencil-square-o fa-fw"></i>  Prediction</a>
+    <a href="{% url 'district_wise' %}" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bars fa-fw"></i>  Districtwise</a>
+    <a href="{% url 'statewise' %}" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bars fa-fw"></i>  Statewise</a>
+    <a href="{% url 'covid_news'%}" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-bell fa-fw"></i> Covid19 News</a>
+  </div>
+</nav>
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px;margin-top:43px;">
+
+  <!-- Header -->
+  <header class="w3-container" style="padding-top:50px">
+    <h2><b><i class="fa fa-dashboard"></i> COVID19 Covid News - Tamilnadu</b></h2>
+  </header>
+  <div class="w3-main" style="margin-left:50px;font-family: Dorid serif;">
+
+    <div class="w3-row w3-padding-64">
+      <div class="w3-twothird w3-container">
+        <img src="https://www.thehindu.com/news/national/tamil-nadu/aqhs93/article34404785.ece/ALTERNATES/LANDSCAPE_1200/image-8jfif"  style="width:100%">
+        <h3 style="font-style: italic ;color:red;">Tamil Nadu chief secretary asks 13 districts to speed up vaccination drive</h3>
+        <h5>Tamil Nadu chief secretary V Irai Anbu wrote to all district collectors on Monday, commending their performance in the third mega Covid-19 vaccination drive conducted on Sunday.
+
+          The drive covered 24,85,814 people, taking the total number of vaccinated persons in the state to 1,38,60,328 in September. As per the release by the health department, the state administered 9.85 lakh more doses than it had targeted. The vaccination drive was carried out at 23,436 centres across Tamil Nadu.
+
+          However, the chief secretary also pointed out that certain districts were lagging behind in administering the doses. “Some of the collectors and the associated district officials are lagging behind and they must put their house in order to speed up vaccination,”
+           the chief secretary said. Tamil Nadu is currently at the 13th position among the states in terms of vaccine coverage.
+
+           Also Read |<a href="https://indianexpress.com/article/cities/chennai/tamil-nadu-chief-secretary-asks-13-districts-to-speed-up-vaccination-drive-7539386/">As positivity rate rises </a> , Tamil Nadu considers lockdown extension
+           “Supply constraint is one reason, and we are taking all steps to address the issue. Meanwhile, I would request you all, particularly the laggers, to redouble your efforts and improve your daily vaccination performance,” Anbu added.
+
+           According to the performance chart issued by the chief secretary, the health units in Coimbatore, Theni, Dindigul and Kanyakumari occupy the top four ranks and their performance has been termed as ‘excellent’.</h5>
+      </div>
+      <div class="w3-third w3-container">
+        <img src="https://images.indianexpress.com/2021/09/chennai-2-1.jpeg"  style="width:100%">
+        <h3 style="font-style: italic ;color:red;"> Tamil Nadu requests Centre to postpone idea of resuming Covid-19 vaccine exports</h3>
+        <p>The Tamil Nadu government on Tuesday requested the Centre to postpone resumption of exports of Covid-19 vaccines, saying only one third of the country’s population have been fully inoculated so far and 115 crore vaccines are still required to give the shots to all the people.
+
+          Minister for medical and family welfare Ma Subramanian put forth the request after Union Health Minister Mansukh Mandaviya on Monday said that exports of surplus Covid-19 vaccines would resume next month under the ‘Vaccine Maitri’ programme.
+
+          Talking to reporters after unveiling the simulation centre at Apollo Hospitals in Vanagaram on Tuesday, Subramanian said the global medical fraternity welcomed the vaccination programme in India, as inoculating people holds the key in the fight against the COVID-19 virus.
+<a href="https://www.google.com/search?q=tamil+nadu+covid+vaccination&rlz=1C1CHBD_enIN868IN868&sxsrf=AOaemvLKSsu-S8cBK-JKJ6YsVx6_liNhRA:1633060298361&source=lnms&tbm=isch&sa=X&sqi=2&ved=2ahUKEwinoevXp6jzAhXpgP0HHT1GDYgQ_AUoAXoECAEQAw&biw=1536&bih=754&dpr=1.25#imgrc=vjjWunbPq6204M" style="text-decoration: none;color: red;">CLICK HERE FOR MORE</a></p>
+<img src="https://images.indianexpress.com/2021/04/Vaccine-TN.jpg"  style="width:100%">
+      </div>
+    </div>
+
+    <div class="w3-row">
+      <div class="w3-twothird w3-container">
+        <img src="https://images.indianexpress.com/2021/04/Vaccine-TN.jpg"  style="width:100%">
+        <h3 style="font-style: italic ;color:red;"> Tamil Nadu logs 1,467 fresh COVID-19 cases : </h3>
+        <h3 style="color:red;"><b>28 deaths push the toll to 35666;</b></h3>
+        <h5 style="text-indent: 0em;">
+          Tamil Nadu logged 1,467 fresh cases of COVID-19 and 28 deaths on Tuesday, taking the overall tally of cases to 2669962 and toll to 35666.
+
+ Chennai recorded the most number of fresh infections in the State as 183 people tested positive. This took the city’s overall tally to 5,49,827. Coimbatore recorded 176 cases, while Chengalpattu logged 112 cases and Erode 109 cases.
+
+In Thanjavur, the number of cases marginally rose to 98 as against 78 the previous day. There were 84 cases in Tiruppur, 68 in Tiruvallur and 65 in Namakkal. While Salem recorded 60 cases, there were 57 cases in Tiruchi.
+
+Of the 28 deaths, Chennai recorded five, while there were two deaths each in Coimbatore, Ramanathapuram, Thanjavur, Tiruvallur, Thoothukudi and Tiruchi. The number of districts that reported deaths stood at 18.
+      </div>
+      <div class="w3-third w3-container">
+        <img src="https://images.financialexpress.com/2021/07/covid-3.jpg"  style="width:100%">
+        <p>
+          Two more persons, in their 30s, succumbed to the infection. A 35-year-old man from Namakkal, who had seizure disorder, was admitted to a private hospital on September 28 with complaints of fever, cough for 14 days and difficulty in breathing. He died of COVID-19 pneumonia the next day. A 38-year-old man from Thoothukudi, who had diabetes, was admitted to the Thoothukudi Medical College on September 25. He died of COVID-19 pneumonia on September 28. With another 1,626 people discharged after treatment, the total number of recovered patients has gone up to 26,11,061. The State’s active caseload stood at 17,150. While Coimbatore has 2,038 active cases, the number dropped in Chennai to 1,970. A total of 1,53,327 samples were tested. So far, 4,69,93,842 samples have been tested.
+        </p>
+
+      </div>
+      <img src="https://images.livemint.com/img/2020/11/12/1600x900/20201102056L_1605162747477_1605162782573.jpg"  style="width:100%">
+    </div>
+
+    <div class="w3-row w3-padding-64">
+      <div class="w3-twothird w3-container">
+        <h4 style="color: rgb(255, 8, 8);">Tamil Nadu extends Covid curbs till Oct-end; schools to reopen for classes 1-8</h4>
+        <h3 style="font-style: italic ;color:red;"> <b> The Tamil Nadu government has also ordered resuming physical classes for the students of classes 1 to 8 from 1 November </b></h3>
+<p>
+  The Tamil Nadu government on Tuesday extended the Covid-related restrictions in the state till 31 October. The MK Stalin-led government has directed religious places to remain shut on all Fridays, Saturdays and Sundays.
+
+
+  Social, political, cultural gatherings, festivals, the consecration of places of worship will continue to be prohibited.
+
+  SIMILAR STORIES
+  Delhi: Will shut schools immediately if Covid risk detected, says Manish Sisodia
+  Delhi: Will shut schools immediately if Covid risk dete...
+  Himachal Pradesh: Schools except residential ones to remain closed till 14 Sept. Details here
+  Himachal Pradesh: Schools except residential ones to re...
+  Kerala college reopening: Education Minister to convene meeting with principals on 10 Sept
+  Kerala college reopening: Education Minister to convene...
+  Rajasthan: Schools to reopen for classes 6 to 8 from Monday. Details here
+  Rajasthan: Schools to reopen for classes 6 to 8 from Mo...
+  Meanwhile, the state government has also said that physical classes for the students of classes 1 to 8 will resume from 1 November.
+
+  A decision to this effect was taken considering the views expressed by the health experts, educationists, and parents that the absence of formal schooling has caused huge loss of learning as well as depression among the school children, Stalin said in a statement. Regular classes for the students of 9 to 12 have been going on.
+
+
+  CM Stalin has urged people to be cautious during the ensuing festival season and to avoid visiting crowded places to prevent a third wave of Covid-19. All commercial establishments should adhere to the guidelines issued by the state government.
+
+  Meanwhile, Tamil Nadu today clocked 1,630 new Covid-19 infections, including a returnee from Karnataka, pushing the caseload to 26,60,553, the health department said.
+
+  With 17 people succumbing to the virus, the death toll has risen to 35,526, according to a medical bulletin.
+
+  Recoveries marginally outnumbered new cases with 1,643 people getting discharged in the last 24 hours, aggregating to 26,07,796 leaving 17,231 active infections.</p>
+        <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202106/school_fees_(1).jpg?9QtNDCZg7Ze_NQSCMgV0QdoVjR_9llye&size=1200:675" style="width:100%">
+
+        <p>Chennai: In line with the Tamil Nadu government’s tentative proposal to resume in-person classes for students of grades 9th-12th from September 1, a detailed list of Standards Operating Procedures (SOPs) have been shared. Health department authorities have been instructed to coordinate with all schools (Govt, Govt-aided and private) to ensure that reopening happens in accordance with the guidelines.
+
+          As per the SOPs, there must be at least 6 feet of distance between students who are seated in a room, or one student one bench is recommended, with the same 6 feet norm. It is even suggested that if the weather is pleasant, classes can be conducted in outdoor spaces. Staggering of entry and exit times and provision of lanes have been suggested to ensure safe passage at gates.
+
+          In terms of occupancy, it has been recommended that staggered/reduced timings be followed in the timetables for different classes. 50% attendance, odd-even formula for classes, running schools in shifts have also been mentioned. In cases of small classrooms, it has been suggested that classes be held in larger areas such as libraries, labs, etc.
+
+          Schools have been urged not to undertake events where COVID-19 protocols cannot be adhered to, functions or celebrations must be avoided. </p>
+
+        <img src="https://english.cdn.zeenews.com/sites/default/files/2021/08/18/962028-schools-reopen.jpg" style="width:100%">
+
+
+    </div>
+    </div>
+
+
+
+
+    </div>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-16 w3-light-grey">
+    <h4><i class="fa fa-copyright w3-text-red w3-large"></i> covid-19 outbreak predicition. All Rights Reserved </h4>
+
+  </footer>
+
+  <!-- End page content -->
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+
+</body>
+</html>

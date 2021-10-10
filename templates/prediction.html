@@ -1,0 +1,425 @@
+<html>
+<title>COVID 19 OUTBREAK PREDICTION</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/fontawesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0-7/css/fontawesome.css">
+<link rel="stylesheet" href="https://fontawesome.com/v5.9/icons?d=gallery&p=2&c=medical">
+
+
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Muli", rockwell;font-size:large;}
+.course {
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+	display: flex;
+	max-width: 80%;
+	margin: 20px;
+    height:15%;
+	overflow: hidden;
+	width: 60%;
+
+}
+
+.course h6 {
+	opacity: 0.6;
+	margin: 0;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.course-preview {
+	background-color: #1f85aa;
+	color: rgb(255, 255, 255);
+	padding: 5%;
+	width: 60%;
+    font-size: small;
+}
+.colors{
+    color: rgb(255, 10, 10);
+    text-shadow: #2A265F;
+}
+
+.course-preview a {
+	color: #fff;
+	display: inline-block;
+	font-size: 2vw;
+	opacity: 0.6;
+	margin-top: 30px;
+	text-decoration: none;
+}
+.fontsize
+{
+    font-size:medium;
+}
+.course-info {
+
+	position: relative;
+   	width: 100%;
+}
+
+.progress-container {
+	right: 10px;
+    bottom: 50px;
+	text-align: center;
+	-ms-text-align-last: center;
+	width: 30%;
+}
+
+.progress {
+	background-color: #ddd;
+	border-radius: 3px;
+	height: 20%;
+	width: 50%;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 50px 50px;
+}
+
+.progress::after {
+	border-radius: 3px;
+	background-color: #2A265F;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 5px;
+	width: 66%;
+}
+
+.progress-text {
+	font-size: 10%;
+	opacity: 0.6;
+
+}
+.btn {
+	background-color: #1f85aa;
+	border: 0;
+	border-radius: 30px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+	color: #fff;
+	padding: 12px 25px;
+	position: absolute;
+	bottom: -60px;
+	width: 25%;
+	height: 100%;
+	font-size:1vw;
+	text-decoration: none;
+	right: 30%;left:70%;
+    padding-top: -80px;
+	letter-spacing: 1px;
+}
+.time_dura_blink
+{
+    background-color: #1f85aa;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+
+    width:25%;
+	height: 5%;
+    position: absolute;
+
+    border-radius: none;
+    right:4%;
+}
+.time_dura_blink2
+{
+
+    width:60%;
+	height: 12%;
+    position: absolute;
+
+    border-radius: none;
+    right:4%;
+	padding-left: 5%;
+	align-content: center;
+
+}
+
+@keyframes glowing {
+        0% {
+          background-color: #57bb24;
+          box-shadow: 0 0 5px #31c50c;
+        }
+        50% {
+          background-color: #eaeee9;
+          box-shadow: 0 0 20px #eaeee9;
+        }
+        100% {
+          background-color: #eaeee9;
+          box-shadow: 0 0 5px #eaeee9;
+        }
+      }
+
+.buttonwarning
+{
+	background-color: red;
+	width:10%;
+
+
+}
+.buttonMedium{
+	background-color: rgb(184, 172, 5);
+	width:10%;
+}
+.buttonlast{
+	background-color: green;
+	width:10%;
+
+}
+
+.right{
+    width: 152px;
+    float: left;
+}
+.blink {
+  -webkit-animation: 2s linear infinite condemned_blink_effect; /* for Safari 4.0 - 8.0 */
+  animation: 2s linear infinite condemned_blink_effect;
+}
+
+/* for Safari 4.0 - 8.0 */
+@-webkit-keyframes condemned_blink_effect {
+  0% {
+    visibility: hidden;
+  }
+  50% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+@keyframes condemned_blink_effect {
+  0% {
+    visibility: hidden;
+  }
+  50% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+body {
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 30% 120% ;
+  background-position: right;
+
+}
+</style>
+<body class="w3-light-grey" background="https://www.fastandup.in/images/single-images/x1619679333.png.pagespeed.ic.eRAi4WlYpj.png">
+
+<!-- Top container -->
+<div class="w3-bar w3-top w3-black w3-large" style="z-index:8; height:10%;align-items: center;padding-top: 10px; ">
+  <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i> </button>
+  <span class="w3-bar-item w3-center">
+    COVID 19 OUTBREAK PREDICTION</span>
+</div>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container w3-row">
+    <div class="w3-col s4" style="padding-top: 40px;">
+      <img src="https://static.spacecrafted.com/e195f18c72bd40e9b8e75c694d186bdc/i/f18e7fa8e6bf467eb1327086bc46919a/1/4SoifmQp45JMgBnHp7ed2/vaccine%20-%20Covid-19.png" width="280" height="35%">
+    </div>
+    <div class="w3-col s8 w3-bar">
+
+    </div>
+  </div>
+  <hr>
+  <div class="w3-container">
+    <h5><b>Menus</b></h5>
+
+  </div>
+  <div class="w3-bar-block" style="font-size: large;font-family: rockwell ;">
+    <a href="" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+    <a href="{% url 'home' %}" class="w3-bar-item w3-button w3-padding  "><i class="fa fa-users fa-fw"></i>  Overview</a>
+    <a href="{% url 'charts' %}"  class="w3-bar-item w3-button w3-padding " ><i class="fa fa-area-chart fa-fw"></i> Statistics </a>
+    <a href="{% url 'prediction' %}" class="w3-bar-item w3-button w3-blue w3-padding "><i class="fa fa-users fa-fw"></i>  Prediction</a>
+
+    <a href="{% url 'district_wise' %}" class="w3-bar-item w3-button w3-padding "><i class="fa fa-bars fa-fw"></i>  Districtwise</a>
+    <a href="{% url 'statewise' %}" class="w3-bar-item w3-button w3-padding "><i class="fa fa-bars fa-fw"></i>  Statewise</a>
+	<a href="{% url 'covid_news'%}" class="w3-bar-item w3-button w3-padding "><i class="fa fa-bell fa-fw"></i> Covid19 News</a>
+  </div>
+</nav>
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px;margin-top:43px;">
+
+  <!-- Header -->
+  <header class="w3-container" style="padding-top:50px">
+    <h5><b><i class="fa fa-dashboard"></i> COVID19 Vaccination Prediction-INDIA</b></h5>
+  </header>
+
+
+  <div class="courses-container">
+	<div class="course">
+		<div class="course-preview">
+			<h4>vaccinated</h4>
+		</div>
+		<div class="course-info">
+			<div class="progress-container ">
+			<h3>{{vaccinatedpeople}}   <h5 class="colors"><b>({{d1}}</b><i class="fa fa-arrow-up colors" aria-hidden="true"><b>)</b></h5></i></h3>
+		</div>
+	</div>
+</div>
+
+<!--second-->
+<div class="courses-container">
+	<div class="course">
+		<div class="course-preview">
+			<h4>Percent of vaccinated</h4>
+		</div>
+		<div class="course-info">
+			<div class="progress-container">
+			<h3>{{noofpeoplevaccinatedinpercent}}%  <h5 class="colors"><b>({{d2}}</b><i class="fa fa-arrow-up colors" aria-hidden="true"><b>)</b></h5></i></h3>
+		</div>
+	</div>
+</div>
+<!--third-->
+<div class="courses-container">
+	<div class="course">
+		<div class="course-preview">
+			<h4>Not Vaccinated</h4>
+		</div>
+		<div class="course-info">
+			<div class="progress-container">
+			<h3>{{balancepeople}}<h5 class="colors"><b>({{d3}}</b><i class="fa fa-arrow-down colors" aria-hidden="true"><b>)</b></h5></i></h3>
+		</div>
+	</div>
+</div>
+<!--fourth-->
+<div class="courses-container">
+	<div class="course">
+		<div class="course-preview">
+
+			<h4>HERD Immunity needed</h4>
+
+		</div>
+		<div class="course-info">
+			<div class="progress-container">
+
+
+			<h3>{{herdimmunityneeded}}% </h3>
+
+		</div>
+	</div>
+</div>
+<!--fifth-->
+<div class="courses-container">
+	<div class="course">
+		<div class="course-preview">
+
+			<h4>HERD Immunity Achieved</h4>
+            <div class="colors"><h4>(so far)</h4></div>
+
+		</div>
+		<div class="course-info">
+			<div class="progress-container">
+
+
+			<h3>{{herdimmuntiyachievedsofar}}%  <h5 class="colors"><b>({{d4}}</b><i class="fa fa-arrow-up colors" aria-hidden="true"><b>)</b></h5></i></h3>
+
+		</div>
+	</div>
+</div>
+
+<!--for resulting time duration prediction-->
+
+
+<div class="w3-row-padding w3-margin-bottom" >
+	<div class="w3-quarter">
+		<div class="w3-container w3-padding-16">
+
+		  <div class="w3-right colors">
+			<h3> Vaccination Achievement </h3>
+			<a href="{% url 'tamilnadu_prediction' %}" class="blink" style="color: #2A265F;" text-decoration="none"><h2>check for Tamil Nadu</h2></a>
+
+		  </div>
+
+		  <div class="w3-right"><i class="fa fa-line-chart  w3-xxxlarge colors"></i></i>
+		  </div>
+
+		  <div class="w3-clear"></div>
+
+		</div>
+	  </div>
+
+    <div class="w3-quarter">
+      <div class="w3-container w3-red w3-padding-16">
+        <div class="w3-left"><i class="fa fa-hand-o-down fa-3x blink w3-xxxlarge"></i></i>
+        </div>
+        <div class="w3-right">
+          <h3>16.35Lakhs per day</h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h4>JUN-2023</h4>
+      </div>
+    </div>
+    <div class="w3-quarter">
+      <div class="w3-container w3-yellow w3-padding-16">
+        <div class="w3-left"><i class="fa fa-hand-o-down fa-3x blink w3-xxxlarge"></i></div>
+        <div class="w3-right" style=>
+          <h3>37.5 Lakhs per day</h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h4>JUN-2022</h4>
+      </div>
+    </div>
+    <div class="w3-quarter">
+      <div class="w3-container w3-green w3-padding-16">
+        <div class="w3-left"><i class="fa fa-hand-o-down fa-3x blink w3-xxxlarge"></i></div>
+        <div class="w3-right">
+          <h3>65.4 Lakhs per day</h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h4>DEC-2021</h4>
+      </div>
+    </div>
+
+  </div>
+
+  <hr>
+
+
+</div>
+<h4><i class="fa fa-copyright w3-text-red w3-large"></i> covid-19 outbreak predicition. All Rights Reserved </h4>
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+
+</script>
+</body>
+</html>
